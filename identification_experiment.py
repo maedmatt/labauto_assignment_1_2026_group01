@@ -1,4 +1,6 @@
 from __future__ import annotations
+import os
+import sys
 import time
 import yaml
 
@@ -8,6 +10,11 @@ from datetime import datetime
 import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+
+if sys.platform == "darwin" and os.environ.get("MJPYTHON_BIN"):
+    # Conda's mjpython wrapper keeps sys.executable as python; labauto checks for mjpython.
+    sys.executable = os.environ["MJPYTHON_BIN"]
+
 from labauto import MuJoCoMechanicalSystem
 from labauto import TrapezoidalMotionLaw
 from labauto import loadController
