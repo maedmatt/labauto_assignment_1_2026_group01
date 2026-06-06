@@ -60,7 +60,7 @@ feedforward_action = np.array([0.0]*dof)
 decentralized_ctrl.starting(initial_reference, measured_output, joint_torque, feedforward_action)
 
 
-working_points=[[0.0,0.0,0.0],[0.5,.5,0.5],[0.0,-0.5,1.0]]
+working_points=[[0.0,0.0,0.0],[0.5,-0.5,0.5],[0.0,-0.5,1.0]]
 
 # run
 from scipy.signal import chirp

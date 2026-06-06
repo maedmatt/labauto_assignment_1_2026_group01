@@ -72,7 +72,7 @@ for itest in range(0,40):
     ml.set_initial_condition(q0)
 
     # Define a sequence of motion instructions
-    initial_position = [0.0] * dof
+    initial_position = [0.5] * dof
     instructions = ["pause: 1", f"move: {initial_position}", "pause: 5"]
     ml.add_instructions(instructions)
 
