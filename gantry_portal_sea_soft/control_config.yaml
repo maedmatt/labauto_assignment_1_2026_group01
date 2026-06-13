@@ -6,29 +6,39 @@ controller:
   cascade_controllers:
   - name: "joint1"
     inner:
-      Kp: 25.0
-      Ki: 2.0
+      Kp: 153.9278
+      Ki: 738.8535
       Kd: 0.0
+      filters_on_measure:
+        - type: "NotchFilter"
+          natural_frequency: 708.0
+          zeros_damping: 0.1
+          poles_damping: 0.8
     outer:
-      Kp: 5.0
+      Kp: 9.6
       Ki: 0.0
       Kd: 0.0
   - name: "joint2"
     inner:
-      Kp: 50.0
-      Ki: 1.0
+      Kp: 141.8475
+      Ki: 907.8238
       Kd: 0.0
+      filters_on_measure:
+        - type: "NotchFilter"
+          natural_frequency: 594.0
+          zeros_damping: 0.1
+          poles_damping: 0.8
     outer:
-      Kp: 5.0
+      Kp: 12.8
       Ki: 0.0
       Kd: 0.0
   - name: "joint3"
     inner:
-      Kp: 30.0
-      Ki: 15.0
+      Kp: 154.6743
+      Ki: 2320.1146
       Kd: 0.0
     outer:
-      Kp: 15.0
+      Kp: 30.0
       Ki: 0.0
       Kd: 0.0
 
