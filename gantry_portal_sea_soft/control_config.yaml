@@ -20,8 +20,8 @@ controller:
       Kd: 0.0
   - name: "joint2"
     inner:
-      Kp: 238.1564
-      Ki: 203.0739
+      Kp: 289.1943
+      Ki: 6465.2271
       Kd: 0.0
       filters_on_measure:
         - type: "NotchFilter"
@@ -29,16 +29,16 @@ controller:
           zeros_damping: 0.1
           poles_damping: 0.8
     outer:
-      Kp: 20.0
+      Kp: 23.6
       Ki: 0.0
       Kd: 0.0
   - name: "joint3"
     inner:
-      Kp: 192.2866
-      Ki: 351.7805
+      Kp: 209.3549
+      Ki: 20913.7727
       Kd: 0.0
     outer:
-      Kp: 36.0
+      Kp: 41.8
       Ki: 0.0
       Kd: 0.0
 
